@@ -52,7 +52,7 @@ if (answers.userId && answers.userPin) {
     if (balance < enteredAmount) {
         console.log("Insuficiant Balance");
     }
-    else {
+    else if (answers.accountType != "Saving") {
         const remaining = balance - enteredAmount;
         console.log(`Your remaining balance is: ${remaining}`);
     }
